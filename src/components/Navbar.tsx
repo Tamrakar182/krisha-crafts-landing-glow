@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Menu, X, ShoppingBag } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,22 +38,15 @@ const Navbar: React.FC = () => {
             </a>
           </nav>
 
-          {/* Cart Icon */}
-          <div className="flex items-center">
-            <a href="#" className="p-2 text-krishacraft-darkbrown hover:text-krishacraft-brown transition-colors">
-              <ShoppingBag size={20} />
-            </a>
-            
-            {/* Mobile Menu Button */}
-            <button 
-              onClick={toggleMenu}
-              className="ml-2 p-2 rounded-md text-krishacraft-darkbrown md:hidden"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open menu</span>
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={toggleMenu}
+            className="p-2 rounded-md text-krishacraft-darkbrown"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open menu</span>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Menu */}

@@ -3,12 +3,11 @@ import React from 'react';
 
 interface ProductCardProps {
   name: string;
-  price: string;
   image: string;
   category: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ name, price, image, category }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ name, image, category }) => {
   return (
     <div className="card-hover group rounded-lg overflow-hidden bg-white">
       <div className="relative overflow-hidden">
@@ -25,11 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, price, image, category 
         </div>
       </div>
       <div className="p-4">
-        <h3 className="text-krishacraft-darkbrown font-medium mb-1">{name}</h3>
-        <p className="text-krishacraft-brown font-semibold">{price}</p>
-        <button className="w-full mt-3 text-center py-2 border border-krishacraft-brown text-krishacraft-brown hover:bg-krishacraft-brown hover:text-white transition-colors rounded">
-          Add to Cart
-        </button>
+        <h3 className="text-krishacraft-darkbrown font-medium">{name}</h3>
       </div>
     </div>
   );

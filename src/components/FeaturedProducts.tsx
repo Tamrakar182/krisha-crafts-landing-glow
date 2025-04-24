@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
 
@@ -6,28 +5,24 @@ const products = [
   {
     id: 1,
     name: "Handwoven Basket",
-    price: "$45.00",
     image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     category: "Home Decor"
   },
   {
     id: 2,
     name: "Ceramic Plant Pot",
-    price: "$32.00",
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     category: "Pottery"
   },
   {
     id: 3,
     name: "Macrame Wall Hanging",
-    price: "$58.00",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     category: "Wall Decor"
   },
   {
     id: 4,
     name: "Handmade Soap Set",
-    price: "$24.00",
     image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     category: "Bath & Body"
   },
@@ -54,7 +49,6 @@ const FeaturedProducts: React.FC = () => {
           </p>
         </div>
 
-        {/* Category Filter */}
         <div className="flex justify-center mb-8 overflow-x-auto">
           <div className="flex space-x-2 md:space-x-4 pb-2">
             {categories.map((category) => (
@@ -73,23 +67,25 @@ const FeaturedProducts: React.FC = () => {
           </div>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
               name={product.name}
-              price={product.price}
               image={product.image}
               category={product.category}
             />
           ))}
         </div>
 
-        {/* More Products Button */}
         <div className="mt-12 text-center">
-          <a href="#" className="btn-primary">
-            View All Products
+          <a 
+            href="https://www.instagram.com/krisha.crafts" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-primary"
+          >
+            View All on Instagram
           </a>
         </div>
       </div>
