@@ -25,22 +25,22 @@ export const testimonials = [
 export const instagramPosts = [
   {
     id: 1,
-    image: '/insta-1.png',
+    image: '/images/insta-1.png',
     link: 'https://www.instagram.com/p/Ch3sEnyjSAd/igsh=MzRlODBiNWFlZA==',
   },
   {
     id: 2,
-    image: '/insta-2.png',
+    image: '/images/insta-2.png',
     link: 'https://www.instagram.com/tv/Chr6QMWjeAZ/igsh=MzRlODBiNWFlZA==',
   },
   {
     id: 3,
-    image: '/insta-3.png',
+    image: '/images/insta-3.png',
     link: 'https://www.instagram.com/p/CaExK4yMNqB/igsh=MzRlODBiNWFlZA==',
   },
   {
     id: 4,
-    image: '/insta-4.png',
+    image: '/images/insta-4.png',
     link: 'https://www.instagram.com/p/CaCSVqcvTJX/igsh=MzRlODBiNWFlZA==',
   },
 ];
@@ -60,19 +60,19 @@ export const products = [
   {
     id: 1,
     name: 'Golden Decorative Turtle',
-    image: '/product-2.png',
+    image: '/images/product-2.png',
     category: 'Decorative',
   },
   {
     id: 2,
     name: 'Brass Ceremonial Lamp',
-    image: '/product-1.png',
+    image: '/images/product-1.png',
     category: 'Traditional',
   },
   {
     id: 3,
     name: 'Copper Ceremonial Vase',
-    image: '/product-3.png',
+    image: '/images/product-3.png',
     category: 'Traditional',
   },
 ];

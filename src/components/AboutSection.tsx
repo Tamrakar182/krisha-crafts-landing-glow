@@ -8,7 +8,7 @@ const AboutSection: React.FC = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative">
               <img
-                src="/product-1.png"
+                src="/images/product-1.png"
                 alt="Krisha crafting handmade items"
                 className="rounded-lg shadow-lg w-full"
               />
@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
             <span className="text-krishacraft-dustyrose font-medium">
               Our Story
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-6 text-krishacraft-darkbrown">
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 text-krishacraft-darkbrown">
               Crafting Beauty With Passion & Purpose
             </h2>
             <div className="space-y-4 text-gray-600">

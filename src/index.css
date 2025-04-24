@@ -1,9 +1,11 @@
+@import '/css/neco.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Neco-Variable', Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -100,7 +102,7 @@ body {
   }
 
   body {
-    @apply bg-krishacraft-cream text-krishacraft-primary font-sans;
+    @apply bg-krishacraft-cream text-krishacraft-primary antialiased;
   }
 
   h1,
@@ -109,7 +111,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply font-serif font-medium text-krishacraft-primary;
+    @apply font-bold text-krishacraft-primary tracking-wide uppercase;
   }
 
   .btn-primary {
