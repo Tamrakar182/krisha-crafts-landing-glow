@@ -71,10 +71,6 @@ export default {
           copper: '#b87333'
         }
       },
-      fontFamily: {
-        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
-        'sans': ['Crimson Text', 'system-ui', 'sans-serif']
-      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -115,5 +111,6 @@ export default {
       }
     }
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

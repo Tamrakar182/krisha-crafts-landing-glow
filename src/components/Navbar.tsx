@@ -1,80 +1,81 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Button } from './ui/button';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+
+const links = [
+  { href: '#products', label: 'Products' },
+  { href: '#about', label: 'About' },
+  { href: '#gallery', label: 'Gallery' },
+  { href: '#contact', label: 'Contact' },
+];
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur-sm border-b border-krishacraft-secondary/10">
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/c57a4a59-c622-452f-bdff-4505e68b7927.png"
-                alt="Krisha Crafts Logo" 
-                className="h-12 w-auto"
-              />
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <a href="/" className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Krisha Crafts Logo"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+          <span className="text-xl font-semibold tracking-tight text-[#13273f]">
+            Krisha Crafts
+          </span>
+        </a>
+        <nav className="hidden md:flex gap-6">
+          {links.map(link => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium transition-colors hover:text-[#13273f]"
+            >
+              {link.label}
             </a>
-          </div>
+          ))}
+        </nav>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-krishacraft-darkbrown hover:text-krishacraft-brown transition-colors">
-              Home
-            </a>
-            <a href="#products" className="text-krishacraft-darkbrown hover:text-krishacraft-brown transition-colors">
-              Products
-            </a>
-            <a href="#about" className="text-krishacraft-darkbrown hover:text-krishacraft-brown transition-colors">
-              About
-            </a>
-            <a href="#testimonials" className="text-krishacraft-darkbrown hover:text-krishacraft-brown transition-colors">
-              Testimonials
-            </a>
-            <a href="#contact" className="text-krishacraft-darkbrown hover:text-krishacraft-brown transition-colors">
-              Contact
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={toggleMenu}
-            className="p-2 rounded-md text-krishacraft-primary hover:text-krishacraft-secondary transition-colors"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open menu</span>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="pt-2 pb-4 space-y-1 bg-white">
-              <a href="#" className="block px-4 py-2 text-krishacraft-darkbrown hover:bg-krishacraft-beige">
-                Home
-              </a>
-              <a href="#products" className="block px-4 py-2 text-krishacraft-darkbrown hover:bg-krishacraft-beige">
-                Products
-              </a>
-              <a href="#about" className="block px-4 py-2 text-krishacraft-darkbrown hover:bg-krishacraft-beige">
-                About
-              </a>
-              <a href="#testimonials" className="block px-4 py-2 text-krishacraft-darkbrown hover:bg-krishacraft-beige">
-                Testimonials
-              </a>
-              <a href="#contact" className="block px-4 py-2 text-krishacraft-darkbrown hover:bg-krishacraft-beige">
-                Contact
-              </a>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon" className="md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[240px] sm:w-[300px]">
+            <div className="flex flex-col space-y-4 mt-8">
+              {links.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-base font-medium transition-colors hover:text-[#13273f]"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
-          </div>
-        )}
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );

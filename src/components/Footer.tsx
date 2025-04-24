@@ -1,73 +1,65 @@
-
 import React from 'react';
-import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
+import Logo from './Logo';
+import { data } from '@/data';
+
+const quickLinks = [
+  { name: 'Home', href: '#' },
+  { name: 'About Us', href: '#about' },
+  { name: 'Products', href: '#products' },
+  { name: 'Gallery', href: '#gallery' },
+  { name: 'Contact', href: '#contact' },
+];
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-krishacraft-darkbrown text-white">
-      <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Brand Information */}
+    <footer className="border-t py-8 px-4 md:px-6 bg-krishacraft-primary text-white">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Krisha Crafts</h3>
-            <p className="text-gray-300 mb-6">
-              Handcrafted treasures created with love and attention to detail. Each piece tells a unique story.
+            <a href="/" className="flex items-center gap-2 mb-4">
+              <Logo />
+              <span className="text-lg font-semibold tracking-tight">
+                Krisha Crafts
+              </span>
+            </a>
+            <p className="text-sm text-white/70">
+              Exquisite metalcraft handcrafted with tradition and passion.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/krisha.crafts" target="_blank" rel="noopener noreferrer" className="text-white hover:text-krishacraft-dustyrose transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-krishacraft-dustyrose transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="mailto:hello@krishacrafts.com" className="text-white hover:text-krishacraft-dustyrose transition-colors">
-                <Mail size={20} />
-              </a>
-            </div>
           </div>
-
-          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#products" className="text-gray-300 hover:text-white transition-colors">Products</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Shipping & Returns</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+            <h3 className="font-medium mb-4 text-white">Quick Links</h3>
+
+            <ul className="mt-4 space-y-2 text-sm">
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-
-          {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Mail size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>hello@krishacrafts.com</span>
-              </li>
-              <li className="flex items-start">
-                <Phone size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li>
-                <p className="text-gray-300 mt-4">
-                  Business Hours:<br />
-                  Monday-Friday: 9am - 5pm<br />
-                  Saturday: 10am - 4pm<br />
-                  Sunday: Closed
-                </p>
-              </li>
-            </ul>
+            <h3 className="font-medium mb-4 text-white">Visit Us</h3>
+            <p className="text-sm text-white/70 mb-2">
+              {data.address}
+              <br />
+              {data.city}
+            </p>
+            <p className="text-sm text-white/70">
+              Open {data.openDays}
+              <br />
+              {data.openTime}
+            </p>
           </div>
         </div>
-        
-        {/* Copyright */}
-        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} Krisha Crafts. All rights reserved.</p>
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/70">
+          <p>© {currentYear} Krisha Crafts. All rights reserved.</p>
         </div>
       </div>
     </footer>

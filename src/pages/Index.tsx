@@ -1,13 +1,11 @@
-
-import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import AboutSection from '@/components/AboutSection';
 import InstagramFeed from '@/components/InstagramFeed';
 import Testimonials from '@/components/Testimonials';
-import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
+import Contact from '@/components/Contact';
 
 const Index = () => {
   return (
@@ -17,9 +15,9 @@ const Index = () => {
         <Hero />
         <FeaturedProducts />
         <AboutSection />
-        <InstagramFeed />
         <Testimonials />
-        <Newsletter />
+        <InstagramFeed />
+        <Contact />
       </main>
       <Footer />
     </div>
