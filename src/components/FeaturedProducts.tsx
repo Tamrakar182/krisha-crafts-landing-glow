@@ -4,31 +4,25 @@ import ProductCard from './ProductCard';
 const products = [
   {
     id: 1,
-    name: "Handwoven Basket",
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    category: "Home Decor"
+    name: "Golden Decorative Turtle",
+    image: "/lovable-uploads/b4cf7ec6-cead-4479-be78-05959e651783.png",
+    category: "Decorative"
   },
   {
     id: 2,
-    name: "Ceramic Plant Pot",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    category: "Pottery"
+    name: "Brass Ceremonial Lamp",
+    image: "/lovable-uploads/90761da7-592d-4843-ae56-1d0df690afb7.png",
+    category: "Traditional"
   },
   {
     id: 3,
-    name: "Macrame Wall Hanging",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    category: "Wall Decor"
-  },
-  {
-    id: 4,
-    name: "Handmade Soap Set",
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    category: "Bath & Body"
-  },
+    name: "Copper Ceremonial Vase",
+    image: "/lovable-uploads/625f31c7-9dae-4216-9204-bd19e257e432.png",
+    category: "Traditional"
+  }
 ];
 
-const categories = ["All", "Home Decor", "Pottery", "Wall Decor", "Bath & Body"];
+const categories = ["All", "Decorative", "Traditional"];
 
 const FeaturedProducts: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");

@@ -9,13 +9,17 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-krishacraft-cream bg-opacity-95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur-sm border-b border-krishacraft-secondary/10">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-krishacraft-darkbrown font-serif font-bold text-xl md:text-2xl">
-              Krisha Crafts
+            <a href="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/c57a4a59-c622-452f-bdff-4505e68b7927.png"
+                alt="Krisha Crafts Logo" 
+                className="h-12 w-auto"
+              />
             </a>
           </div>
 
@@ -41,7 +45,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMenu}
-            className="p-2 rounded-md text-krishacraft-darkbrown"
+            className="p-2 rounded-md text-krishacraft-primary hover:text-krishacraft-secondary transition-colors"
             aria-expanded="false"
           >
             <span className="sr-only">Open menu</span>
@@ -52,7 +56,7 @@ const Navbar: React.FC = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="pt-2 pb-4 space-y-1 bg-krishacraft-cream">
+            <div className="pt-2 pb-4 space-y-1 bg-white">
               <a href="#" className="block px-4 py-2 text-krishacraft-darkbrown hover:bg-krishacraft-beige">
                 Home
               </a>

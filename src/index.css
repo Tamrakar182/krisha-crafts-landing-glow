@@ -1,6 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -94,21 +94,21 @@
   }
 
   body {
-    @apply bg-krishacraft-cream text-foreground font-sans;
+    @apply bg-krishacraft-cream text-krishacraft-primary font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium;
+    @apply font-serif font-medium text-krishacraft-primary;
   }
 
   .btn-primary {
-    @apply bg-krishacraft-brown hover:bg-krishacraft-darkbrown text-white transition-colors 
+    @apply bg-krishacraft-primary hover:bg-krishacraft-secondary text-white transition-colors 
            duration-300 ease-in-out py-3 px-6 rounded-md font-medium;
   }
   
   .btn-secondary {
-    @apply bg-transparent hover:bg-krishacraft-dustyrose border border-krishacraft-dustyrose
-           text-krishacraft-darkbrown hover:text-white transition-colors duration-300 
+    @apply bg-transparent hover:bg-krishacraft-secondary border border-krishacraft-secondary
+           text-krishacraft-primary hover:text-white transition-colors duration-300 
            ease-in-out py-2.5 px-5 rounded-md font-medium;
   }
   
