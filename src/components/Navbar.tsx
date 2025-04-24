@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
       <div className="container flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-2">
           <img
-            src="/logo.png"
+            src="/logo.jpg"
             alt="Krisha Crafts Logo"
             width={40}
             height={40}

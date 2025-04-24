@@ -3,7 +3,7 @@ function Logo() {
     <div className="flex-shrink-0">
       <a href="/" className="flex items-center">
         <img
-          src="/logo.png"
+          src="/logo.jpg"
           alt="Krisha Crafts Logo"
           className="h-12 w-12 rounded-full"
         />

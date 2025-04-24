@@ -1,21 +1,21 @@
 export const testimonials = [
   {
     id: 1,
-    author: 'Sarah Johnson',
+    author: 'Ram Bahadur',
     quote:
       "The quality of Krisha's handmade products is exceptional! I've purchased multiple items and each one has exceeded my expectations. The attention to detail is remarkable.",
     rating: 5,
   },
   {
     id: 2,
-    author: 'Michael Rodriguez',
+    author: 'Sita Maharjan',
     quote:
       "I ordered a custom piece for my wife's birthday, and it was absolutely perfect. The personal touch and craftmanship made it such a special gift.",
     rating: 4,
   },
   {
     id: 3,
-    author: 'Emma Thompson',
+    author: 'Gita Joshi',
     quote:
       'Not only are the products beautiful, but the customer service is outstanding. Krisha was so helpful in helping me choose the right items for my home.',
     rating: 5,
@@ -25,37 +25,23 @@ export const testimonials = [
 export const instagramPosts = [
   {
     id: 1,
-    image:
-      'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-    likes: 124,
-    comments: 18,
-    link: 'https://www.instagram.com/krisha.crafts/',
+    image: '/insta-1.png',
+    link: 'https://www.instagram.com/p/Ch3sEnyjSAd/igsh=MzRlODBiNWFlZA==',
   },
   {
     id: 2,
-    image:
-      'https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-    likes: 97,
-    link: 'https://www.instagram.com/krisha.crafts/',
-
-    comments: 12,
+    image: '/insta-2.png',
+    link: 'https://www.instagram.com/tv/Chr6QMWjeAZ/igsh=MzRlODBiNWFlZA==',
   },
   {
     id: 3,
-    image:
-      'https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-    likes: 156,
-    link: 'https://www.instagram.com/krisha.crafts/',
-
-    comments: 24,
+    image: '/insta-3.png',
+    link: 'https://www.instagram.com/p/CaExK4yMNqB/igsh=MzRlODBiNWFlZA==',
   },
   {
     id: 4,
-    image:
-      'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-    likes: 88,
-    link: 'https://www.instagram.com/krisha.crafts/',
-    comments: 9,
+    image: '/insta-4.png',
+    link: 'https://www.instagram.com/p/CaCSVqcvTJX/igsh=MzRlODBiNWFlZA==',
   },
 ];
 
